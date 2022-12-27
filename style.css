@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(rgb(0, 0, 212),rgb(0, 0, 119));
+}
+.box{
+    position: relative;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 315px;
+    background: url(tree.png);
+    background-repeat: repeat-x;
+    z-index: 1;
+}
+.box .moon{
+    position: absolute;
+    top:12%;
+    left: 50%;
+    transform:translateX(-50%) ;
+    height: 325px;
+    width: 325px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 50px white;
+}
+.box .moon::before{
+    content: '';
+    position: absolute;
+    background: url(santa.png);
+    background-position: center;
+    width: 640px;
+    height: 400px;
+    left: -55%;
+    top: -10%;
+    animation: animSanta 4s ease-in-out infinite;
+}
+@keyframes animSanta{
+0%{
+    transform: translateY(0px);
+}
+50%{
+    transform: translateY(60px);
+}
+}
