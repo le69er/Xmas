@@ -56,3 +56,58 @@ body{
     transform: translateY(60px);
 }
 }
+.box .moon p{
+    position: absolute;
+    font-size: 3.5em;
+    font-family:'DigitalStripCyrillic';
+    inset: -125px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-shadow: 1px 1px 6px white,
+    -1px -1px 6px white;
+}
+
+.snow, .snow::before, .snow::after{
+    content: '';
+    position: absolute;
+    top: -650px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px, white, transparent),
+    radial-gradient(6px 6px at 200px 150px, white, transparent),
+    radial-gradient(3px 3px at 300px 250px, white, transparent),
+    radial-gradient(4px 4px at 400px 350px, white, transparent),
+    radial-gradient(6px 6px at 500px 100px, white, transparent),
+    radial-gradient(3px 3px at 50px 2000px, white, transparent),
+    radial-gradient(4px 4px at 100px 300px, white, transparent),
+    radial-gradient(6px 6px at 200px 400px, white, transparent),
+    radial-gradient(3px 3px at 250px 500px, white, transparent);
+    background-size: 650px 650px;
+    animation: snowAnim 3s linear;
+    animation-iteration-count: infinite;
+}
+.snow::after{
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-direction: 6s;
+    animation-duration: reverse;
+}
+.snow::before{
+    margin-left: -350px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-direction: 9s;
+    animation-duration: reverse;
+}
+@keyframes snowAnim{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(650px);
+    }
+}
