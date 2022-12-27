@@ -86,7 +86,7 @@ body{
     radial-gradient(6px 6px at 200px 400px, white, transparent),
     radial-gradient(3px 3px at 250px 500px, white, transparent);
     background-size: 650px 650px;
-    animation: snowAnim 3s linear;
+    animation: snowAnim 5s linear;
     animation-iteration-count: infinite;
 }
 .snow::after{
